@@ -1,15 +1,13 @@
-"""Ejercicio 4 Control de Computadores en Mantenimiento"""
+"""Menú interactivo del proyecto Software FJ (Fase 4 - Programación)."""
 """Estudiante 1 :Juan Sebastian Muñoz Lopez"""
 """Curso: Programación Código: 213023"""
 """Punto de entrada de Software FJ. se inicializa creando  el main.py con la estructura propuesta para el desarrolo del menu y sus modulos"""
 from datetime import datetime
 from decimal import Decimal
-import logging
 
 from configuracion import FORMATO_FECHA_HORA
 from excepciones.errores import ErrorSoftwareFJ
 from gestion.sistema import SistemaSoftwareFJ, configurar_logger
-from modelos.reserva import Reserva
 from modelos.servicios_especializados import ServicioSala, ServicioEquipo, ServicioAsesoria
 
 
@@ -28,9 +26,12 @@ def leer_numero(mensaje, permitir_vacio=False, predeterminado=None):
     if permitir_vacio and not texto:
         return predeterminado
     try:
-        return Decimal(texto)
-    except Exception as exc:
+        numero = Decimal(texto)
+    except (ValueError, ArithmeticError) as exc:
         raise ValueError("Debe ingresar un valor numérico válido.") from exc
+    if not numero.is_finite():
+        raise ValueError("Debe ingresar un número finito (no NaN ni Infinity).")
+    return numero
 
 
 def leer_entero(mensaje):
@@ -215,7 +216,7 @@ def ejecutar_menu():
         else:
             print("\nOperación atendida.")
         finally:
-            print("operación finalizada; Software FJ permanece disponible.")
+            print("Operación finalizada; Software FJ permanece disponible.")
 
 
 if __name__ == "__main__":
