@@ -215,7 +215,7 @@ def ejecutar_menu():
         else:
             print("\nOperación atendida.")
         finally:
-            print("operación finalizado; Software FJ permanece disponible.")
+            print("operación finalizada; Software FJ permanece disponible.")
 
 
 if __name__ == "__main__":
