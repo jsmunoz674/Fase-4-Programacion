@@ -1,4 +1,4 @@
-"""Tarea 2 Ejercicio 4 Control de Computadores en Mantenimiento"""
+"""Ejercicio 4 Control de Computadores en Mantenimiento"""
 """Estudiante 1 :Juan Sebastian Muñoz Lopez"""
 """Curso: Programación Código: 213023"""
 """Punto de entrada de Software FJ. se inicializa creando  el main.py con la estructura propuesta para el desarrolo del menu y sus modulos"""
