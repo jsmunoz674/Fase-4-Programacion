@@ -1,4 +1,4 @@
-estudiante : mauricio alberto velasco
+"""Estudiante: mauricio alberto velasco"""
 """Simulación automática de 12 operaciones de Software FJ.
 
 
