@@ -1,5 +1,4 @@
 """Menú interactivo del proyecto Software FJ (Fase 4 - Programación)."""
-"""Estudiante 1 :Juan Sebastian Muñoz Lopez"""
 """Curso: Programación Código: 213023"""
 """Punto de entrada de Software FJ. se inicializa creando  el main.py con la estructura propuesta para el desarrolo del menu y sus modulos"""
 from datetime import datetime
