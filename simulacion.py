@@ -4,7 +4,7 @@
 
 Usa el mismo SistemaSoftwareFJ del proyecto. Cada operación se ejecuta de forma
 protegida: si falla, el error se registra en el log y la simulación continúa.
-Se llama desde el menú (opción 11) o directamente: python simulacion.py
+Se ejecuta por separado desde la terminal: python simulacion.py
 """
 from datetime import datetime
 from decimal import Decimal
